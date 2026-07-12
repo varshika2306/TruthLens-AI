@@ -1,0 +1,132 @@
+{
+  "investigation_id": "9d445521-597e-403f-9eef-061bf9e68245",
+  "original_filename": "download.jpeg",
+  "platform": "TruthLens AI",
+  "pipeline_version": "1.0.0",
+  "deep_analysis": false,
+  "started_at": "2026-07-12T08:03:47.721004+00:00",
+  "completed_at": "2026-07-12T08:03:55.801219+00:00",
+  "pipeline_stages": {
+    "metadata_extraction": "success",
+    "visual_analysis": "success",
+    "ai_report_generation": "success"
+  },
+  "metadata": {
+    "file_info": {
+      "path": "uploads\\9d445521-597e-403f-9eef-061bf9e68245.jpeg",
+      "filename": "9d445521-597e-403f-9eef-061bf9e68245.jpeg",
+      "extension": "jpeg",
+      "size_bytes": 4755,
+      "size_kb": 4.64,
+      "modified_at": "2026-07-12T08:03:47.719994Z"
+    },
+    "image_properties": {
+      "width": 201,
+      "height": 251,
+      "megapixels": 0.05,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_transparency": false,
+      "is_animated": false
+    },
+    "exif_data": {},
+    "gps_data": {
+      "available": false
+    },
+    "camera_info": {
+      "make": "Unknown",
+      "model": "Unknown",
+      "software": "Unknown",
+      "datetime_original": null,
+      "datetime_digitized": null,
+      "exposure_time": null,
+      "f_number": null,
+      "iso_speed": null,
+      "focal_length": null,
+      "flash": null,
+      "orientation": null
+    },
+    "integrity_flags": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make"
+    ],
+    "extraction_timestamp": "2026-07-12T08:03:47.722229Z"
+  },
+  "visual_analysis": {
+    "image_size": {
+      "width": 201,
+      "height": 251,
+      "aspect_ratio": 0.8
+    },
+    "colour_stats": {
+      "bands": [
+        "R",
+        "G",
+        "B"
+      ],
+      "mean": {
+        "R": 56.63,
+        "G": 53.27,
+        "B": 53.7
+      },
+      "stddev": {
+        "R": 47.45,
+        "G": 44.83,
+        "B": 44.0
+      },
+      "min": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "max": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "rms": {
+        "R": 73.88,
+        "G": 69.62,
+        "B": 69.42
+      }
+    },
+    "brightness": 54.3,
+    "contrast": 45.23,
+    "sharpness_score": 924.38,
+    "noise_estimate": 0.0004,
+    "histogram_entropy": 6.4357,
+    "dominant_channel": "R",
+    "anomaly_signals": [
+      "possible_aggressive_smoothing"
+    ],
+    "analysis_notes": []
+  },
+  "ai_report": {
+    "generated_at": "2026-07-12T13:33:55.801219+05:30",
+    "granite_available": true,
+    "model_used": "ibm/granite-4-h-small",
+    "authenticity_score": 56,
+    "risk_level": "MEDIUM",
+    "confidence": "Medium",
+    "key_signals": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make",
+      "possible_aggressive_smoothing"
+    ],
+    "ai_summary": "```\n\n**Executive Summary**\n\nThe submitted JPEG (download.jpeg) exhibits several technical irregularities that warrant suspicion regarding its authenticity. The file lacks essential EXIF metadata\u2014including camera make/model, capture date/time, orientation flags, GPS coordinates, and exposure parameters\u2014raising questions about whether it originated from a standard digital camera or was generated/synthesised by software. Additionally, visual analysis reveals possible aggressive smoothing across large regions of the image, which can be indicative of heavy post\u2011processing or algorithmic generation rather than natural photographic capture. No obvious pixel\u2011level manipulations such as cloning, splicing, or inconsistent lighting were detected; however, the combination of missing provenance data and smoothed texture strongly suggests either synthetic creation or extensive tampering after original acquisition.\n\n**Key Findings**\n\n| Observation | Evidence / Metric |\n|-------------|-------------------|\n| **No EXIF/Original Metadata** | Integrity flags: `no_exif_data_found`, `missing_original_datetime`, `missing_camera_make`. Camera model/software fields empty. |\n| **Low Brightness & Contrast Values** | Brightness\u202f=\u202f54.3, Contrast\u202f=\u202f45.23 \u2013 lower than typical for well\u2011exposed outdoor scenes. |\n| **High Sharpness Score with Smoothed Texture** | Sharpness\u202f=\u202f924.38 but flagged \u201cpossible_aggressive_smoothing\u201d. This mismatch often occurs when high\u2011frequency details have been artificially softened. |\n| **Very Low Noise Estimate** | Noise estimate\u202f=\u202f0.0004 \u2013 far below realistic sensor noise levels, implying removal of grain/noise via denoising algorithms. |\n| **Uniform Histogram Entropy** | Entropy\u202f=\u202f6.4357 \u2013 relatively uniform distribution without expected peaks in complex scene areas, consistent with synthetic rendering. |\n| **Absence of GPS Data** | GPS information unavailable (`available: false`). |\n\n**Authenticity Assessment**\n\nBased solely on the provided forensic signals, the image cannot be confidently deemed genuine. The lack of verifiable EXIF headers eliminates any traceable chain of custody, while the visual metrics point toward processing steps more characteristic of computer\u2011generated imagery or deliberate post\u2011production manipulation (e.g., excessive smoothing/denoising). Consequently, the preponderance of evidence leans toward *non\u2011authentic* status until further corroborating information is obtained.\n\n**Possible Manipulation Indicators**\n\n1. **Missing Provenance Metadata**  \n   - Absence of `DateTimeOriginal`, `Make`, `Model`, and other core tags typically present in photographs captured by consumer cameras.  \n   - Indicates the file may have been created digitally or stripped of identifying markers during editing.\n\n2. **Aggressive Smoothing Flag**  \n   - Detected anomaly labeled \u201cpossible_aggressive_smoothing\u201d suggests application of strong blur/denoise filters, erasing fine detail and textural nuance.  \n   - Such processing is uncommon in unaltered photos taken under normal conditions.\n\n3. **Discrepancy Between High Sharpness and Smooth Appearance**  \n   - A sharpness metric of ~924 yet visually smoothed textures imply sharpening applied over already blurred content\u2014a common artifact of upscaling or stylisation pipelines.\n\n4. **Unusually Low Sensor Noise**  \n   - Near\u2011zero noise estimate contradicts real-world sensor behavior where some level of random noise always persists unless deliberately removed.\n\n5. **Homogeneous Histogram Entropy**  \n   - Uniform entropy across the frame deviates from natural scenes where edges, shadows, and varied surfaces produce distinct entropy spikes.\n\n**Final Recommendation**\n\nGiven the confluence of missing metadata, atypical brightness/contrast values, anomalous visual processing signatures, and implausible noise characteristics, we recommend treating this image with caution. If used for evidentiary purposes, additional verification steps are advised:\n\n- Obtain the source device or raw capture files (if available) to reconstruct original metadata.  \n- Perform manual",
+    "deep_analysis": false
+  },
+  "verdict": {
+    "authenticity_score": 56,
+    "risk_level": "MEDIUM",
+    "key_signals": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make",
+      "possible_aggressive_smoothing"
+    ],
+    "summary": "```\n\n**Executive Summary**\n\nThe submitted JPEG (download.jpeg) exhibits several technical irregularities that warrant suspicion regarding its authenticity. The file lacks essential EXIF metadata\u2014including camera make/model, capture date/time, orientation flags, GPS coordinates, and exposure parameters\u2014raising questions about whether it originated from a standard digital camera or was generated/synthesised by software. Additionally, visual analysis reveals possible aggressive smoothing across large regions of the image, which can be indicative of heavy post\u2011processing or algorithmic generation rather than natural photographic capture. No obvious pixel\u2011level manipulations such as cloning, splicing, or inconsistent lighting were detected; however, the combination of missing provenance data and smoothed texture strongly suggests either synthetic creation or extensive tampering after original acquisition.\n\n**Key Findings**\n\n| Observation | Evidence / Metric |\n|-------------|-------------------|\n| **No EXIF/Original Metadata** | Integrity flags: `no_exif_data_found`, `missing_original_datetime`, `missing_camera_make`. Camera model/software fields empty. |\n| **Low Brightness & Contrast Values** | Brightness\u202f=\u202f54.3, Contrast\u202f=\u202f45.23 \u2013 lower than typical for well\u2011exposed outdoor scenes. |\n| **High Sharpness Score with Smoothed Texture** | Sharpness\u202f=\u202f924.38 but flagged \u201cpossible_aggressive_smoothing\u201d. This mismatch often occurs when high\u2011frequency details have been artificially softened. |\n| **Very Low Noise Estimate** | Noise estimate\u202f=\u202f0.0004 \u2013 far below realistic sensor noise levels, implying removal of grain/noise via denoising algorithms. |\n| **Uniform Histogram Entropy** | Entropy\u202f=\u202f6.4357 \u2013 relatively uniform distribution without expected peaks in complex scene areas, consistent with synthetic rendering. |\n| **Absence of GPS Data** | GPS information unavailable (`available: false`). |\n\n**Authenticity Assessment**\n\nBased solely on the provided forensic signals, the image cannot be confidently deemed genuine. The lack of verifiable EXIF headers eliminates any traceable chain of custody, while the visual metrics point toward processing steps more characteristic of computer\u2011generated imagery or deliberate post\u2011production manipulation (e.g., excessive smoothing/denoising). Consequently, the preponderance of evidence leans toward *non\u2011authentic* status until further corroborating information is obtained.\n\n**Possible Manipulation Indicators**\n\n1. **Missing Provenance Metadata**  \n   - Absence of `DateTimeOriginal`, `Make`, `Model`, and other core tags typically present in photographs captured by consumer cameras.  \n   - Indicates the file may have been created digitally or stripped of identifying markers during editing.\n\n2. **Aggressive Smoothing Flag**  \n   - Detected anomaly labeled \u201cpossible_aggressive_smoothing\u201d suggests application of strong blur/denoise filters, erasing fine detail and textural nuance.  \n   - Such processing is uncommon in unaltered photos taken under normal conditions.\n\n3. **Discrepancy Between High Sharpness and Smooth Appearance**  \n   - A sharpness metric of ~924 yet visually smoothed textures imply sharpening applied over already blurred content\u2014a common artifact of upscaling or stylisation pipelines.\n\n4. **Unusually Low Sensor Noise**  \n   - Near\u2011zero noise estimate contradicts real-world sensor behavior where some level of random noise always persists unless deliberately removed.\n\n5. **Homogeneous Histogram Entropy**  \n   - Uniform entropy across the frame deviates from natural scenes where edges, shadows, and varied surfaces produce distinct entropy spikes.\n\n**Final Recommendation**\n\nGiven the confluence of missing metadata, atypical brightness/contrast values, anomalous visual processing signatures, and implausible noise characteristics, we recommend treating this image with caution. If used for evidentiary purposes, additional verification steps are advised:\n\n- Obtain the source device or raw capture files (if available) to reconstruct original metadata.  \n- Perform manual"
+  }
+}

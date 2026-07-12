@@ -1,0 +1,132 @@
+{
+  "investigation_id": "e8775b86-548e-49c0-a0e8-a54a3cee22a4",
+  "original_filename": "download.jpeg",
+  "platform": "TruthLens AI",
+  "pipeline_version": "1.0.0",
+  "deep_analysis": false,
+  "started_at": "2026-07-12T07:45:51.215894+00:00",
+  "completed_at": "2026-07-12T07:45:58.725630+00:00",
+  "pipeline_stages": {
+    "metadata_extraction": "success",
+    "visual_analysis": "success",
+    "ai_report_generation": "success"
+  },
+  "metadata": {
+    "file_info": {
+      "path": "uploads\\e8775b86-548e-49c0-a0e8-a54a3cee22a4.jpeg",
+      "filename": "e8775b86-548e-49c0-a0e8-a54a3cee22a4.jpeg",
+      "extension": "jpeg",
+      "size_bytes": 4755,
+      "size_kb": 4.64,
+      "modified_at": "2026-07-12T07:45:51.215895Z"
+    },
+    "image_properties": {
+      "width": 201,
+      "height": 251,
+      "megapixels": 0.05,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_transparency": false,
+      "is_animated": false
+    },
+    "exif_data": {},
+    "gps_data": {
+      "available": false
+    },
+    "camera_info": {
+      "make": "Unknown",
+      "model": "Unknown",
+      "software": "Unknown",
+      "datetime_original": null,
+      "datetime_digitized": null,
+      "exposure_time": null,
+      "f_number": null,
+      "iso_speed": null,
+      "focal_length": null,
+      "flash": null,
+      "orientation": null
+    },
+    "integrity_flags": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make"
+    ],
+    "extraction_timestamp": "2026-07-12T07:45:51.219009Z"
+  },
+  "visual_analysis": {
+    "image_size": {
+      "width": 201,
+      "height": 251,
+      "aspect_ratio": 0.8
+    },
+    "colour_stats": {
+      "bands": [
+        "R",
+        "G",
+        "B"
+      ],
+      "mean": {
+        "R": 56.63,
+        "G": 53.27,
+        "B": 53.7
+      },
+      "stddev": {
+        "R": 47.45,
+        "G": 44.83,
+        "B": 44.0
+      },
+      "min": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "max": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "rms": {
+        "R": 73.88,
+        "G": 69.62,
+        "B": 69.42
+      }
+    },
+    "brightness": 54.3,
+    "contrast": 45.23,
+    "sharpness_score": 924.38,
+    "noise_estimate": 0.0004,
+    "histogram_entropy": 6.4357,
+    "dominant_channel": "R",
+    "anomaly_signals": [
+      "possible_aggressive_smoothing"
+    ],
+    "analysis_notes": []
+  },
+  "ai_report": {
+    "generated_at": "2026-07-12T13:15:58.725630+05:30",
+    "granite_available": true,
+    "model_used": "ibm/granite-4-h-small",
+    "authenticity_score": 56,
+    "risk_level": "MEDIUM",
+    "confidence": "Medium",
+    "key_signals": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make",
+      "possible_aggressive_smoothing"
+    ],
+    "ai_summary": "```python\ndef generate_forensic_report(filename, dimensions, mode, format, filesize_kb,\n                            integrity_flags, camera_info, gps_info,\n                            visual_analysis):\n    \"\"\"\n    Generates a professional digital image forensics report based on provided data.\n    \n    Parameters:\n        filename (str): The name of the image file.\n        dimensions (tuple): A tuple containing width and height of the image in pixels.\n        mode (str): Color mode of the image (e.g., RGB).\n        format (str): File format of the image (e.g., JPEG).\n        filesize_kb (float): Size of the image file in kilobytes.\n        integrity_flags (list): List of flags indicating potential issues with metadata.\n        camera_info (dict): Dictionary containing camera information such as make, model, etc.\n        gps_info (dict): Dictionary containing GPS information if available.\n        visual_analysis (dict): Results from visual analysis including brightness, contrast, sharpness, noise estimate, histogram entropy, detected anomalies.\n        \n    Returns:\n        str: Formatted forensic investigation report.\n    \"\"\"\n    executive_summary = (\n        f\"Executive Summary:\\n\"\n        f\"The image '{filename}' has been analyzed for authenticity using \"\n        f\"digital image forensics techniques. This report details key findings, \"\n        f\"authenticity assessment, possible manipulation indicators, and final recommendations.\\n\\n\"\n    )\n    \n    key_findings = (\n        f\"Key Findings:\\n\"\n        f\"- Dimensions: {dimensions[0]}x{dimensions[1]} pixels\\n\"\n        f\"- Format: {format}\\n\"\n        f\"- File size: {filesize_kb} KB\\n\"\n        f\"- Integrity Flags: {'; '.join(integrity_flags) if integrity_flags else 'None'}\\n\"\n        f\"- Camera Info: Make={camera_info.get('make', 'N/A')}, Model={camera_info.get('model', 'N/A')}, Software={camera_info.get('software', 'N/A')}\\n\"\n        f\"- GPS Info: Available={gps_info.get('available', False)}\\n\"\n        f\"- Visual Analysis: Brightness={visual_analysis['brightness']}, Contrast={visual_analysis['contrast']}, Sharpness={visual_analysis['sharpness']}, Noise Estimate={visual_analysis['noise_estimate']}, Histogram Entropy={visual_analysis['histogram_entropy']}\\n\"\n        f\"- Detected Visual Anomalies: {'; '.join(visual_analysis['detected_visual_anomalies']) if visual_analysis['detected_visual_anomalies'] else 'None'}\\n\\n\"\n    )\n\n    authenticity_assessment = (\n        f\"Authenticity Assessment:\\n\"\n        f\"The absence of EXIF data, missing original datetime, and lack of identifiable camera make/model suggest that this image may have undergone post-processing or was not captured by a standard consumer-grade device. \"\n        f\"The presence of aggressive smoothing indicates potential tampering aimed at reducing texture detail or removing artifacts typically associated with high-resolution captures.\"\n    )\n\n    possible_manipulation_indicators = (\n        f\"Possible Manipulation Indicators:\\n\"\n        f\"- Aggressive Smoothing: Suggests intentional alteration to homogenize pixel values across regions, possibly to conceal edits or blend multiple sources into one seamless image.\\n\"\n    )\n\n    final_recommendation = (\n        f\"Final Recommendation:\\n\"\n        f\"This image should be treated with caution due to its incomplete metadata profile and signs of post-capture processing. Further verification through additional forensic tools or cross-referencing with known source material is recommended before considering it reliable evidence.\\n\"\n    )\n\n    return executive_summary + key_findings + authenticity_assessment + \\\n           possible_manipulation_indicators + final_recommendation\n\n\n# Example usage\nreport = generate_forensic_report(\n    filename=\"download.jpeg\",\n    dimensions=(201, 251),\n    mode=\"RGB\",\n    format",
+    "deep_analysis": false
+  },
+  "verdict": {
+    "authenticity_score": 56,
+    "risk_level": "MEDIUM",
+    "key_signals": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make",
+      "possible_aggressive_smoothing"
+    ],
+    "summary": "```python\ndef generate_forensic_report(filename, dimensions, mode, format, filesize_kb,\n                            integrity_flags, camera_info, gps_info,\n                            visual_analysis):\n    \"\"\"\n    Generates a professional digital image forensics report based on provided data.\n    \n    Parameters:\n        filename (str): The name of the image file.\n        dimensions (tuple): A tuple containing width and height of the image in pixels.\n        mode (str): Color mode of the image (e.g., RGB).\n        format (str): File format of the image (e.g., JPEG).\n        filesize_kb (float): Size of the image file in kilobytes.\n        integrity_flags (list): List of flags indicating potential issues with metadata.\n        camera_info (dict): Dictionary containing camera information such as make, model, etc.\n        gps_info (dict): Dictionary containing GPS information if available.\n        visual_analysis (dict): Results from visual analysis including brightness, contrast, sharpness, noise estimate, histogram entropy, detected anomalies.\n        \n    Returns:\n        str: Formatted forensic investigation report.\n    \"\"\"\n    executive_summary = (\n        f\"Executive Summary:\\n\"\n        f\"The image '{filename}' has been analyzed for authenticity using \"\n        f\"digital image forensics techniques. This report details key findings, \"\n        f\"authenticity assessment, possible manipulation indicators, and final recommendations.\\n\\n\"\n    )\n    \n    key_findings = (\n        f\"Key Findings:\\n\"\n        f\"- Dimensions: {dimensions[0]}x{dimensions[1]} pixels\\n\"\n        f\"- Format: {format}\\n\"\n        f\"- File size: {filesize_kb} KB\\n\"\n        f\"- Integrity Flags: {'; '.join(integrity_flags) if integrity_flags else 'None'}\\n\"\n        f\"- Camera Info: Make={camera_info.get('make', 'N/A')}, Model={camera_info.get('model', 'N/A')}, Software={camera_info.get('software', 'N/A')}\\n\"\n        f\"- GPS Info: Available={gps_info.get('available', False)}\\n\"\n        f\"- Visual Analysis: Brightness={visual_analysis['brightness']}, Contrast={visual_analysis['contrast']}, Sharpness={visual_analysis['sharpness']}, Noise Estimate={visual_analysis['noise_estimate']}, Histogram Entropy={visual_analysis['histogram_entropy']}\\n\"\n        f\"- Detected Visual Anomalies: {'; '.join(visual_analysis['detected_visual_anomalies']) if visual_analysis['detected_visual_anomalies'] else 'None'}\\n\\n\"\n    )\n\n    authenticity_assessment = (\n        f\"Authenticity Assessment:\\n\"\n        f\"The absence of EXIF data, missing original datetime, and lack of identifiable camera make/model suggest that this image may have undergone post-processing or was not captured by a standard consumer-grade device. \"\n        f\"The presence of aggressive smoothing indicates potential tampering aimed at reducing texture detail or removing artifacts typically associated with high-resolution captures.\"\n    )\n\n    possible_manipulation_indicators = (\n        f\"Possible Manipulation Indicators:\\n\"\n        f\"- Aggressive Smoothing: Suggests intentional alteration to homogenize pixel values across regions, possibly to conceal edits or blend multiple sources into one seamless image.\\n\"\n    )\n\n    final_recommendation = (\n        f\"Final Recommendation:\\n\"\n        f\"This image should be treated with caution due to its incomplete metadata profile and signs of post-capture processing. Further verification through additional forensic tools or cross-referencing with known source material is recommended before considering it reliable evidence.\\n\"\n    )\n\n    return executive_summary + key_findings + authenticity_assessment + \\\n           possible_manipulation_indicators + final_recommendation\n\n\n# Example usage\nreport = generate_forensic_report(\n    filename=\"download.jpeg\",\n    dimensions=(201, 251),\n    mode=\"RGB\",\n    format"
+  }
+}

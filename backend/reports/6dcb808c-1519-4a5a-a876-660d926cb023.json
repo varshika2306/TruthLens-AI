@@ -1,0 +1,132 @@
+{
+  "investigation_id": "6dcb808c-1519-4a5a-a876-660d926cb023",
+  "original_filename": "download.jpeg",
+  "platform": "TruthLens AI",
+  "pipeline_version": "1.0.0",
+  "deep_analysis": false,
+  "started_at": "2026-07-12T07:46:34.254843+00:00",
+  "completed_at": "2026-07-12T07:46:40.127490+00:00",
+  "pipeline_stages": {
+    "metadata_extraction": "success",
+    "visual_analysis": "success",
+    "ai_report_generation": "success"
+  },
+  "metadata": {
+    "file_info": {
+      "path": "uploads\\6dcb808c-1519-4a5a-a876-660d926cb023.jpeg",
+      "filename": "6dcb808c-1519-4a5a-a876-660d926cb023.jpeg",
+      "extension": "jpeg",
+      "size_bytes": 4755,
+      "size_kb": 4.64,
+      "modified_at": "2026-07-12T07:46:34.252826Z"
+    },
+    "image_properties": {
+      "width": 201,
+      "height": 251,
+      "megapixels": 0.05,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_transparency": false,
+      "is_animated": false
+    },
+    "exif_data": {},
+    "gps_data": {
+      "available": false
+    },
+    "camera_info": {
+      "make": "Unknown",
+      "model": "Unknown",
+      "software": "Unknown",
+      "datetime_original": null,
+      "datetime_digitized": null,
+      "exposure_time": null,
+      "f_number": null,
+      "iso_speed": null,
+      "focal_length": null,
+      "flash": null,
+      "orientation": null
+    },
+    "integrity_flags": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make"
+    ],
+    "extraction_timestamp": "2026-07-12T07:46:34.254843Z"
+  },
+  "visual_analysis": {
+    "image_size": {
+      "width": 201,
+      "height": 251,
+      "aspect_ratio": 0.8
+    },
+    "colour_stats": {
+      "bands": [
+        "R",
+        "G",
+        "B"
+      ],
+      "mean": {
+        "R": 56.63,
+        "G": 53.27,
+        "B": 53.7
+      },
+      "stddev": {
+        "R": 47.45,
+        "G": 44.83,
+        "B": 44.0
+      },
+      "min": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "max": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "rms": {
+        "R": 73.88,
+        "G": 69.62,
+        "B": 69.42
+      }
+    },
+    "brightness": 54.3,
+    "contrast": 45.23,
+    "sharpness_score": 924.38,
+    "noise_estimate": 0.0004,
+    "histogram_entropy": 6.4357,
+    "dominant_channel": "R",
+    "anomaly_signals": [
+      "possible_aggressive_smoothing"
+    ],
+    "analysis_notes": []
+  },
+  "ai_report": {
+    "generated_at": "2026-07-12T13:16:40.127490+05:30",
+    "granite_available": true,
+    "model_used": "ibm/granite-4-h-small",
+    "authenticity_score": 56,
+    "risk_level": "MEDIUM",
+    "confidence": "Medium",
+    "key_signals": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make",
+      "possible_aggressive_smoothing"
+    ],
+    "ai_summary": "```python\ndef generate_forensic_report():\n    \"\"\"\n    Generates a detailed forensic investigation report based on provided image metadata and visual analysis.\n    \n    Returns:\n        str: A formatted forensic report with sections for executive summary, key findings, authenticity assessment,\n             possible manipulation indicators, and final recommendation.\n    \"\"\"\n    # Define the structure of our report\n    report = {\n        \"Executive Summary\": \"\",\n        \"Key Findings\": [],\n        \"Authenticity Assessment\": \"\",\n        \"Possible Manipulation Indicators\": [],\n        \"Final Recommendation\": \"\"\n    }\n\n    # Populate the report based on given data\n    report[\"Executive Summary\"] = (\n        \"The image 'download.jpeg' exhibits several characteristics that raise concerns about its authenticity.\"\n        \"Notably, it lacks essential EXIF metadata typically present in genuine photographs, such as camera make/model,\"\n        \"original datetime, and exposure details. Additionally, visual anomalies suggest potential aggressive smoothing,\"\n        \"which could indicate digital manipulation.\"\n    )\n\n    # Add key findings derived directly from the input data\n    report[\"Key Findings\"].append(\"No EXIF data found.\")\n    report[\"Key Findings\"].append(\"Missing original datetime and camera information.\")\n    report[\"Key Findings\"].append(\"Visual anomaly detected: possible_aggressive_smoothing.\")\n\n    # Assess authenticity based on available evidence\n    report[\"Authenticity Assessment\"] = (\n        \"Based on the absence of critical EXIF metadata and detection of aggressive smoothing,\"\n        \"the image's authenticity is highly questionable. These factors strongly suggest post-processing\"\n        \"or creation using non-camera sources (e.g., graphic design software).\"\n    )\n\n    # List specific manipulation indicators observed during analysis\n    report[\"Possible Manipulation Indicators\"].append(\n        \"Aggressive Smoothing Detected: The sharpness value (924.38) combined with low noise estimate (0.0004)\"\n        \"and high histogram entropy (6.4357) suggests over-smoothing likely applied to conceal artifacts.\"\n    )\n    report[\"Possible Manipulation Indicators\"].append(\n        \"Metadata Gaps: Complete lack of EXIF tags including camera model/make, orientation, flash usage,\"\n        \"and GPS coordinates raises red flags commonly associated with synthetic images.\"\n    )\n\n    # Provide actionable advice grounded in forensic observations\n    report[\"Final Recommendation\"] = (\n        \"Given these findings, treat this image with extreme caution if used for evidentiary purposes.\"\n        \"Conduct further verification through reverse image search techniques and consider consulting\"\n        \"additional experts specializing in deepfake detection technologies before drawing conclusions\"\n        \"about its validity.\"\n    )\n\n    return \"\\n\\n\".join(f\"{section}: {content}\" for section, content in report.items())\n\n\n# Generate and print the forensic report\nprint(generate_forensic_report())\n```",
+    "deep_analysis": false
+  },
+  "verdict": {
+    "authenticity_score": 56,
+    "risk_level": "MEDIUM",
+    "key_signals": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make",
+      "possible_aggressive_smoothing"
+    ],
+    "summary": "```python\ndef generate_forensic_report():\n    \"\"\"\n    Generates a detailed forensic investigation report based on provided image metadata and visual analysis.\n    \n    Returns:\n        str: A formatted forensic report with sections for executive summary, key findings, authenticity assessment,\n             possible manipulation indicators, and final recommendation.\n    \"\"\"\n    # Define the structure of our report\n    report = {\n        \"Executive Summary\": \"\",\n        \"Key Findings\": [],\n        \"Authenticity Assessment\": \"\",\n        \"Possible Manipulation Indicators\": [],\n        \"Final Recommendation\": \"\"\n    }\n\n    # Populate the report based on given data\n    report[\"Executive Summary\"] = (\n        \"The image 'download.jpeg' exhibits several characteristics that raise concerns about its authenticity.\"\n        \"Notably, it lacks essential EXIF metadata typically present in genuine photographs, such as camera make/model,\"\n        \"original datetime, and exposure details. Additionally, visual anomalies suggest potential aggressive smoothing,\"\n        \"which could indicate digital manipulation.\"\n    )\n\n    # Add key findings derived directly from the input data\n    report[\"Key Findings\"].append(\"No EXIF data found.\")\n    report[\"Key Findings\"].append(\"Missing original datetime and camera information.\")\n    report[\"Key Findings\"].append(\"Visual anomaly detected: possible_aggressive_smoothing.\")\n\n    # Assess authenticity based on available evidence\n    report[\"Authenticity Assessment\"] = (\n        \"Based on the absence of critical EXIF metadata and detection of aggressive smoothing,\"\n        \"the image's authenticity is highly questionable. These factors strongly suggest post-processing\"\n        \"or creation using non-camera sources (e.g., graphic design software).\"\n    )\n\n    # List specific manipulation indicators observed during analysis\n    report[\"Possible Manipulation Indicators\"].append(\n        \"Aggressive Smoothing Detected: The sharpness value (924.38) combined with low noise estimate (0.0004)\"\n        \"and high histogram entropy (6.4357) suggests over-smoothing likely applied to conceal artifacts.\"\n    )\n    report[\"Possible Manipulation Indicators\"].append(\n        \"Metadata Gaps: Complete lack of EXIF tags including camera model/make, orientation, flash usage,\"\n        \"and GPS coordinates raises red flags commonly associated with synthetic images.\"\n    )\n\n    # Provide actionable advice grounded in forensic observations\n    report[\"Final Recommendation\"] = (\n        \"Given these findings, treat this image with extreme caution if used for evidentiary purposes.\"\n        \"Conduct further verification through reverse image search techniques and consider consulting\"\n        \"additional experts specializing in deepfake detection technologies before drawing conclusions\"\n        \"about its validity.\"\n    )\n\n    return \"\\n\\n\".join(f\"{section}: {content}\" for section, content in report.items())\n\n\n# Generate and print the forensic report\nprint(generate_forensic_report())\n```"
+  }
+}

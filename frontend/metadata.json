@@ -1,0 +1,6 @@
+{
+  "name": "TruthLens AI",
+  "description": "An Agentic AI Digital Forensics Suite powered by IBM watsonx.ai, Granite Foundation Models, Retrieval-Augmented Generation (RAG), and IBM Watson Assistant to verify image authenticity.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

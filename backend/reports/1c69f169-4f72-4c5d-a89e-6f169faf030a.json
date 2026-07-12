@@ -1,0 +1,118 @@
+{
+  "investigation_id": "1c69f169-4f72-4c5d-a89e-6f169faf030a",
+  "original_filename": "download.jpeg",
+  "platform": "TruthLens AI",
+  "pipeline_version": "1.0.0",
+  "deep_analysis": false,
+  "started_at": "2026-07-10T15:34:32.618175+00:00",
+  "completed_at": "2026-07-10T15:34:32.718197+00:00",
+  "pipeline_stages": {
+    "metadata_extraction": "success",
+    "visual_analysis": "success",
+    "ai_report_generation": "failed"
+  },
+  "metadata": {
+    "file_info": {
+      "path": "uploads\\1c69f169-4f72-4c5d-a89e-6f169faf030a.jpeg",
+      "filename": "1c69f169-4f72-4c5d-a89e-6f169faf030a.jpeg",
+      "extension": "jpeg",
+      "size_bytes": 4755,
+      "size_kb": 4.64,
+      "modified_at": "2026-07-10T15:34:32.612530Z"
+    },
+    "image_properties": {
+      "width": 201,
+      "height": 251,
+      "megapixels": 0.05,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_transparency": false,
+      "is_animated": false
+    },
+    "exif_data": {},
+    "gps_data": {
+      "available": false
+    },
+    "camera_info": {
+      "make": "Unknown",
+      "model": "Unknown",
+      "software": "Unknown",
+      "datetime_original": null,
+      "datetime_digitized": null,
+      "exposure_time": null,
+      "f_number": null,
+      "iso_speed": null,
+      "focal_length": null,
+      "flash": null,
+      "orientation": null
+    },
+    "integrity_flags": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make"
+    ],
+    "extraction_timestamp": "2026-07-10T15:34:32.619691Z"
+  },
+  "visual_analysis": {
+    "image_size": {
+      "width": 201,
+      "height": 251,
+      "aspect_ratio": 0.8
+    },
+    "colour_stats": {
+      "bands": [
+        "R",
+        "G",
+        "B"
+      ],
+      "mean": {
+        "R": 56.63,
+        "G": 53.27,
+        "B": 53.7
+      },
+      "stddev": {
+        "R": 47.45,
+        "G": 44.83,
+        "B": 44.0
+      },
+      "min": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "max": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "rms": {
+        "R": 73.88,
+        "G": 69.62,
+        "B": 69.42
+      }
+    },
+    "brightness": 54.3,
+    "contrast": 45.23,
+    "sharpness_score": 924.38,
+    "noise_estimate": 0.0004,
+    "histogram_entropy": 6.4357,
+    "dominant_channel": "R",
+    "anomaly_signals": [
+      "possible_aggressive_smoothing"
+    ],
+    "analysis_notes": []
+  },
+  "ai_report": {
+    "error": "ReportAgent.generate() got an unexpected keyword argument 'deep_analysis'",
+    "authenticity_score": null,
+    "risk_level": "UNKNOWN",
+    "key_signals": [],
+    "ai_summary": "Report generation failed."
+  },
+  "verdict": {
+    "authenticity_score": null,
+    "risk_level": "UNKNOWN",
+    "key_signals": [],
+    "summary": "Report generation failed."
+  }
+}

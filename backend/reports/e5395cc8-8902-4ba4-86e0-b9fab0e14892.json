@@ -1,0 +1,132 @@
+{
+  "investigation_id": "e5395cc8-8902-4ba4-86e0-b9fab0e14892",
+  "original_filename": "download.jpeg",
+  "platform": "TruthLens AI",
+  "pipeline_version": "1.0.0",
+  "deep_analysis": false,
+  "started_at": "2026-07-12T08:06:24.961973+00:00",
+  "completed_at": "2026-07-12T08:06:32.682653+00:00",
+  "pipeline_stages": {
+    "metadata_extraction": "success",
+    "visual_analysis": "success",
+    "ai_report_generation": "success"
+  },
+  "metadata": {
+    "file_info": {
+      "path": "uploads\\e5395cc8-8902-4ba4-86e0-b9fab0e14892.jpeg",
+      "filename": "e5395cc8-8902-4ba4-86e0-b9fab0e14892.jpeg",
+      "extension": "jpeg",
+      "size_bytes": 4755,
+      "size_kb": 4.64,
+      "modified_at": "2026-07-12T08:06:24.957733Z"
+    },
+    "image_properties": {
+      "width": 201,
+      "height": 251,
+      "megapixels": 0.05,
+      "mode": "RGB",
+      "format": "JPEG",
+      "has_transparency": false,
+      "is_animated": false
+    },
+    "exif_data": {},
+    "gps_data": {
+      "available": false
+    },
+    "camera_info": {
+      "make": "Unknown",
+      "model": "Unknown",
+      "software": "Unknown",
+      "datetime_original": null,
+      "datetime_digitized": null,
+      "exposure_time": null,
+      "f_number": null,
+      "iso_speed": null,
+      "focal_length": null,
+      "flash": null,
+      "orientation": null
+    },
+    "integrity_flags": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make"
+    ],
+    "extraction_timestamp": "2026-07-12T08:06:24.961973Z"
+  },
+  "visual_analysis": {
+    "image_size": {
+      "width": 201,
+      "height": 251,
+      "aspect_ratio": 0.8
+    },
+    "colour_stats": {
+      "bands": [
+        "R",
+        "G",
+        "B"
+      ],
+      "mean": {
+        "R": 56.63,
+        "G": 53.27,
+        "B": 53.7
+      },
+      "stddev": {
+        "R": 47.45,
+        "G": 44.83,
+        "B": 44.0
+      },
+      "min": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "max": {
+        "R": 255,
+        "G": 255,
+        "B": 255
+      },
+      "rms": {
+        "R": 73.88,
+        "G": 69.62,
+        "B": 69.42
+      }
+    },
+    "brightness": 54.3,
+    "contrast": 45.23,
+    "sharpness_score": 924.38,
+    "noise_estimate": 0.0004,
+    "histogram_entropy": 6.4357,
+    "dominant_channel": "R",
+    "anomaly_signals": [
+      "possible_aggressive_smoothing"
+    ],
+    "analysis_notes": []
+  },
+  "ai_report": {
+    "generated_at": "2026-07-12T13:36:32.682653+05:30",
+    "granite_available": true,
+    "model_used": "ibm/granite-4-h-small",
+    "authenticity_score": 56,
+    "risk_level": "MEDIUM",
+    "confidence": "Medium",
+    "key_signals": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make",
+      "possible_aggressive_smoothing"
+    ],
+    "ai_summary": "```python\ndef generate_forensic_report(filename, dimensions, mode, format, filesize_kb,\n                            integrity_flags, camera_info, gps_info,\n                            visual_analysis):\n    \"\"\"\n    Generates a professional forensic investigation report based on provided data.\n\n    Parameters:\n        filename (str): Name of the file being analyzed.\n        dimensions (tuple): Dimensions of the image in pixels (width, height).\n        mode (str): Color mode of the image (e.g., RGB, CMYK).\n        format (str): File format of the image (e.g., JPEG, PNG).\n        filesize_kb (float): Size of the image file in kilobytes.\n        integrity_flags (list): List of flags indicating missing metadata/integrity issues.\n        camera_info (dict): Dictionary containing camera information.\n        gps_info (dict): Dictionary containing GPS information.\n        visual_analysis (dict): Dictionary containing results from visual analysis tools.\n\n    Returns:\n        str: A formatted forensic investigation report.\n    \"\"\"\n    # Constants for formatting\n    REPORT_HEADER = \"FORENSIC INVESTIGATION REPORT\"\n    SECTION_SEPARATOR = \"=\" * 50 + \"\\n\"\n\n    # Start building the report with header\n    report_lines = [REPORT_HEADER.center(50), SECTION_SEPARATOR]\n\n    # Add basic image information section\n    report_lines.append(\"Image Information\")\n    report_lines.append(f\"Filename: {filename}\")\n    report_lines.append(f\"Dimensions: {dimensions[0]}x{dimensions[1]}\")\n    report_lines.append(f\"Mode: {mode}\")\n    report_lines.append(f\"Format: {format}\")\n    report_lines.append(f\"File Size: {filesize_kb} KB\\n\")\n\n    # Integrity flags section\n    report_lines.append(\"Integrity Flags:\")\n    if not integrity_flags:\n        report_lines.append(\"No significant integrity flags detected.\")\n    else:\n        for flag in integrity_flags:\n            report_lines.append(f\"- {flag}\")\n\n    # Camera information section\n    report_lines.append(\"\\nCamera Information:\")\n    if not camera_info.values():\n        report_lines.append(\"Camera information could not be determined due to lack of EXIF data.\")\n    else:\n        for key, value in camera_info.items():\n            report_lines.append(f\"{key.capitalize().replace('_', ' ')}: {'N/A' if value is None else value}\")\n\n    # GPS information section\n    report_lines.append(\"\\nGPS Information:\")\n    if not gps_info.get('available'):\n        report_lines.append(\"GPS data unavailable.\")\n    else:\n        for key, value in gps_info.items():\n            report_lines.append(f\"{key.capitalize().replace('_', ' ')}: {value}\")\n\n    # Visual Analysis Section\n    report_lines.append(\"\\nVisual Analysis Results:\")\n    for key, value in visual_analysis.items():\n        report_lines.append(f\"{key.replace('_', ' ').capitalize()}: {value}\")\n\n    # Conclude with executive summary and recommendations\n    report_lines.append(SECTION_SEPARATOR)\n    report_lines.append(\"Executive Summary:\")\n    report_lines.append(\n        \"Based on the available evidence, this report assesses the likelihood \"\n        \"of manipulation within the digital image.\"\n    )\n    report_lines.append(\n        \"While certain indicators suggest potential tampering, further analysis may be required \"\n        \"to confirm these findings conclusively.\"\n    )\n\n    report_lines.append(\"\\nRecommendations:\")\n    report_lines.append(\"- Conduct additional verification using alternative forensic methods.\")\n    report_lines.append(\"- Compare against known genuine samples where possible.\")\n\n    return '\\n'.join(report_lines)\n\n\n# Example usage\nexample_report = generate_forensic_report(\n    filename=\"download.jpeg\",\n    dimensions=(201, 251),\n    mode=\"RGB\",\n    format=\"JPEG\",\n    filesize_kb=4.64,\n    integrity_flags=[\"no_exif_data_found\", \"missing_original_datetime\", \"missing_camera_make\"],\n    camera_info={\n        \"make\": \"Unknown\",\n        \"model\": \"Unknown\",\n        \"software\": \"Unknown\",\n        \"datetime",
+    "deep_analysis": false
+  },
+  "verdict": {
+    "authenticity_score": 56,
+    "risk_level": "MEDIUM",
+    "key_signals": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make",
+      "possible_aggressive_smoothing"
+    ],
+    "summary": "```python\ndef generate_forensic_report(filename, dimensions, mode, format, filesize_kb,\n                            integrity_flags, camera_info, gps_info,\n                            visual_analysis):\n    \"\"\"\n    Generates a professional forensic investigation report based on provided data.\n\n    Parameters:\n        filename (str): Name of the file being analyzed.\n        dimensions (tuple): Dimensions of the image in pixels (width, height).\n        mode (str): Color mode of the image (e.g., RGB, CMYK).\n        format (str): File format of the image (e.g., JPEG, PNG).\n        filesize_kb (float): Size of the image file in kilobytes.\n        integrity_flags (list): List of flags indicating missing metadata/integrity issues.\n        camera_info (dict): Dictionary containing camera information.\n        gps_info (dict): Dictionary containing GPS information.\n        visual_analysis (dict): Dictionary containing results from visual analysis tools.\n\n    Returns:\n        str: A formatted forensic investigation report.\n    \"\"\"\n    # Constants for formatting\n    REPORT_HEADER = \"FORENSIC INVESTIGATION REPORT\"\n    SECTION_SEPARATOR = \"=\" * 50 + \"\\n\"\n\n    # Start building the report with header\n    report_lines = [REPORT_HEADER.center(50), SECTION_SEPARATOR]\n\n    # Add basic image information section\n    report_lines.append(\"Image Information\")\n    report_lines.append(f\"Filename: {filename}\")\n    report_lines.append(f\"Dimensions: {dimensions[0]}x{dimensions[1]}\")\n    report_lines.append(f\"Mode: {mode}\")\n    report_lines.append(f\"Format: {format}\")\n    report_lines.append(f\"File Size: {filesize_kb} KB\\n\")\n\n    # Integrity flags section\n    report_lines.append(\"Integrity Flags:\")\n    if not integrity_flags:\n        report_lines.append(\"No significant integrity flags detected.\")\n    else:\n        for flag in integrity_flags:\n            report_lines.append(f\"- {flag}\")\n\n    # Camera information section\n    report_lines.append(\"\\nCamera Information:\")\n    if not camera_info.values():\n        report_lines.append(\"Camera information could not be determined due to lack of EXIF data.\")\n    else:\n        for key, value in camera_info.items():\n            report_lines.append(f\"{key.capitalize().replace('_', ' ')}: {'N/A' if value is None else value}\")\n\n    # GPS information section\n    report_lines.append(\"\\nGPS Information:\")\n    if not gps_info.get('available'):\n        report_lines.append(\"GPS data unavailable.\")\n    else:\n        for key, value in gps_info.items():\n            report_lines.append(f\"{key.capitalize().replace('_', ' ')}: {value}\")\n\n    # Visual Analysis Section\n    report_lines.append(\"\\nVisual Analysis Results:\")\n    for key, value in visual_analysis.items():\n        report_lines.append(f\"{key.replace('_', ' ').capitalize()}: {value}\")\n\n    # Conclude with executive summary and recommendations\n    report_lines.append(SECTION_SEPARATOR)\n    report_lines.append(\"Executive Summary:\")\n    report_lines.append(\n        \"Based on the available evidence, this report assesses the likelihood \"\n        \"of manipulation within the digital image.\"\n    )\n    report_lines.append(\n        \"While certain indicators suggest potential tampering, further analysis may be required \"\n        \"to confirm these findings conclusively.\"\n    )\n\n    report_lines.append(\"\\nRecommendations:\")\n    report_lines.append(\"- Conduct additional verification using alternative forensic methods.\")\n    report_lines.append(\"- Compare against known genuine samples where possible.\")\n\n    return '\\n'.join(report_lines)\n\n\n# Example usage\nexample_report = generate_forensic_report(\n    filename=\"download.jpeg\",\n    dimensions=(201, 251),\n    mode=\"RGB\",\n    format=\"JPEG\",\n    filesize_kb=4.64,\n    integrity_flags=[\"no_exif_data_found\", \"missing_original_datetime\", \"missing_camera_make\"],\n    camera_info={\n        \"make\": \"Unknown\",\n        \"model\": \"Unknown\",\n        \"software\": \"Unknown\",\n        \"datetime"
+  }
+}

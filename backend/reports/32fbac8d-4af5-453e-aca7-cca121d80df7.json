@@ -1,0 +1,136 @@
+{
+  "investigation_id": "32fbac8d-4af5-453e-aca7-cca121d80df7",
+  "original_filename": "unnamed.png",
+  "platform": "TruthLens AI",
+  "pipeline_version": "1.0.0",
+  "deep_analysis": false,
+  "started_at": "2026-07-12T08:09:49.677268+00:00",
+  "completed_at": "2026-07-12T08:09:58.403023+00:00",
+  "pipeline_stages": {
+    "metadata_extraction": "success",
+    "visual_analysis": "success",
+    "ai_report_generation": "success"
+  },
+  "metadata": {
+    "file_info": {
+      "path": "uploads\\32fbac8d-4af5-453e-aca7-cca121d80df7.png",
+      "filename": "32fbac8d-4af5-453e-aca7-cca121d80df7.png",
+      "extension": "png",
+      "size_bytes": 1397901,
+      "size_kb": 1365.14,
+      "modified_at": "2026-07-12T08:09:49.675242Z"
+    },
+    "image_properties": {
+      "width": 1024,
+      "height": 1024,
+      "megapixels": 1.05,
+      "mode": "RGB",
+      "format": "PNG",
+      "has_transparency": false,
+      "is_animated": false
+    },
+    "exif_data": {},
+    "gps_data": {
+      "available": false
+    },
+    "camera_info": {
+      "make": "Unknown",
+      "model": "Unknown",
+      "software": "Unknown",
+      "datetime_original": null,
+      "datetime_digitized": null,
+      "exposure_time": null,
+      "f_number": null,
+      "iso_speed": null,
+      "focal_length": null,
+      "flash": null,
+      "orientation": null
+    },
+    "integrity_flags": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make"
+    ],
+    "extraction_timestamp": "2026-07-12T08:09:49.677268Z"
+  },
+  "visual_analysis": {
+    "image_size": {
+      "width": 1024,
+      "height": 1024,
+      "aspect_ratio": 1.0
+    },
+    "colour_stats": {
+      "bands": [
+        "R",
+        "G",
+        "B"
+      ],
+      "mean": {
+        "R": 114.54,
+        "G": 104.56,
+        "B": 93.56
+      },
+      "stddev": {
+        "R": 60.24,
+        "G": 56.0,
+        "B": 52.95
+      },
+      "min": {
+        "R": 0,
+        "G": 0,
+        "B": 0
+      },
+      "max": {
+        "R": 255,
+        "G": 255,
+        "B": 254
+      },
+      "rms": {
+        "R": 129.42,
+        "G": 118.62,
+        "B": 107.51
+      }
+    },
+    "brightness": 106.29,
+    "contrast": 56.14,
+    "sharpness_score": 827.46,
+    "noise_estimate": 0.0038,
+    "histogram_entropy": 7.5886,
+    "dominant_channel": "R",
+    "anomaly_signals": [
+      "possible_aggressive_smoothing"
+    ],
+    "analysis_notes": [
+      "rich_texture_or_heavy_compression"
+    ]
+  },
+  "ai_report": {
+    "generated_at": "2026-07-12T13:39:58.403023+05:30",
+    "granite_available": true,
+    "model_used": "ibm/granite-4-h-small",
+    "authenticity_score": 56,
+    "risk_level": "MEDIUM",
+    "confidence": "Medium",
+    "key_signals": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make",
+      "possible_aggressive_smoothing",
+      "rich_texture_or_heavy_compression"
+    ],
+    "ai_summary": "```python\ndef generate_forensic_report(image_info):\n    \"\"\"\n    Generates a forensic investigation report based on the provided image information.\n\n    Parameters:\n    image_info (dict): A dictionary containing metadata and visual analysis of the image.\n\n    Returns:\n    str: A formatted forensic investigation report.\n    \"\"\"\n    executive_summary = (\n        \"The submitted image has undergone digital forensics examination \"\n        \"to assess its authenticity. The absence of EXIF data and GPS information \"\n        \"raises initial concerns about the provenance of the image.\"\n    )\n\n    key_findings = [\n        f\"Image dimensions: {image_info['dimensions'][0]}x{image_info['dimensions'][1]} pixels.\",\n        f\"Brightness level: {image_info['visual_analysis']['brightness']}\",\n        f\"Contrast level: {image_info['visual_analysis']['contrast']}\",\n        f\"Sharpness score: {image_info['visual_analysis']['sharpness']}\",\n        f\"Noise estimate: {image_info['visual_analysis']['noise_estimate']}\",\n        f\"Histogram entropy: {image_info['visual_analysis']['histogram_entropy']}\",\n        \"Possible aggressive smoothing detected in the image.\",\n    ]\n\n    authenticity_assessment = (\n        \"Based on the lack of EXIF data and missing camera details, combined with \"\n        \"the presence of possible aggressive smoothing, there are strong indicators \"\n        \"that this image may have been manipulated or not captured by a standard camera.\"\n    )\n\n    manipulation_indicators = [\n        \"No EXIF data found, indicating that original metadata might have been stripped.\",\n        \"Missing original datetime and digitized datetime fields suggest tampering or editing.\",\n        \"Absence of camera make/model information implies non-standard capture device or software alteration.\",\n        \"Aggressive smoothing could indicate use of filters or post-processing tools to alter image texture.\"\n    ]\n\n    final_recommendation = (\n        \"Given the findings above, it is recommended to treat this image with caution. \"\n        \"Further verification through additional sources or methods is advised before considering \"\n        \"its authenticity for any critical purposes.\"\n    )\n\n    return \"\\n\\n\".join([\n        executive_summary,\n        \"\",\n        \"Key Findings:\",\n        \"- \".join(key_findings),\n        \"\",\n        \"Authenticity Assessment:\",\n        authenticity_assessment,\n        \"\",\n        \"Possible Manipulation Indicators:\",\n        \"- \".join(manipulation_indicators),\n        \"\",\n        \"Final Recommendation:\",\n        final_recommendation\n    ])\n\n\n# Example usage\nimage_info = {\n    'filename': 'unnamed.png',\n    'dimensions': (1024, 1024),\n    'mode': 'RGB',\n    'format': 'PNG',\n    'file_size_kb': 1365.14,\n    'metadata': {\n        'integrity_flags': ['no_exif_data_found', 'missing_original_datetime', 'missing_camera_make'],\n        'camera_info': {\n            'make': 'Unknown',\n            'model': 'Unknown',\n            'software': 'Unknown',\n            'datetime_original': None,\n            'datetime_digitized': None,\n            'exposure_time': None,\n            'f_number': None,\n            'iso_speed': None,\n            'focal_length': None,\n            'flash': None,\n            'orientation': None\n        },\n        'gps_info': {'available': False}\n    },\n    'visual_analysis': {\n        'brightness': 106.29,\n        'contrast': 56.14,\n        'sharpness': 827.46,\n        'noise_estimate': 0.0038,\n        'histogram_entropy': 7.5886,\n        'detected_visual_anomalies': ['possible_aggressive_smoothing']\n    }\n}\n\nreport = generate_forensic_report(image_info)\nprint(report)\n```",
+    "deep_analysis": false
+  },
+  "verdict": {
+    "authenticity_score": 56,
+    "risk_level": "MEDIUM",
+    "key_signals": [
+      "no_exif_data_found",
+      "missing_original_datetime",
+      "missing_camera_make",
+      "possible_aggressive_smoothing",
+      "rich_texture_or_heavy_compression"
+    ],
+    "summary": "```python\ndef generate_forensic_report(image_info):\n    \"\"\"\n    Generates a forensic investigation report based on the provided image information.\n\n    Parameters:\n    image_info (dict): A dictionary containing metadata and visual analysis of the image.\n\n    Returns:\n    str: A formatted forensic investigation report.\n    \"\"\"\n    executive_summary = (\n        \"The submitted image has undergone digital forensics examination \"\n        \"to assess its authenticity. The absence of EXIF data and GPS information \"\n        \"raises initial concerns about the provenance of the image.\"\n    )\n\n    key_findings = [\n        f\"Image dimensions: {image_info['dimensions'][0]}x{image_info['dimensions'][1]} pixels.\",\n        f\"Brightness level: {image_info['visual_analysis']['brightness']}\",\n        f\"Contrast level: {image_info['visual_analysis']['contrast']}\",\n        f\"Sharpness score: {image_info['visual_analysis']['sharpness']}\",\n        f\"Noise estimate: {image_info['visual_analysis']['noise_estimate']}\",\n        f\"Histogram entropy: {image_info['visual_analysis']['histogram_entropy']}\",\n        \"Possible aggressive smoothing detected in the image.\",\n    ]\n\n    authenticity_assessment = (\n        \"Based on the lack of EXIF data and missing camera details, combined with \"\n        \"the presence of possible aggressive smoothing, there are strong indicators \"\n        \"that this image may have been manipulated or not captured by a standard camera.\"\n    )\n\n    manipulation_indicators = [\n        \"No EXIF data found, indicating that original metadata might have been stripped.\",\n        \"Missing original datetime and digitized datetime fields suggest tampering or editing.\",\n        \"Absence of camera make/model information implies non-standard capture device or software alteration.\",\n        \"Aggressive smoothing could indicate use of filters or post-processing tools to alter image texture.\"\n    ]\n\n    final_recommendation = (\n        \"Given the findings above, it is recommended to treat this image with caution. \"\n        \"Further verification through additional sources or methods is advised before considering \"\n        \"its authenticity for any critical purposes.\"\n    )\n\n    return \"\\n\\n\".join([\n        executive_summary,\n        \"\",\n        \"Key Findings:\",\n        \"- \".join(key_findings),\n        \"\",\n        \"Authenticity Assessment:\",\n        authenticity_assessment,\n        \"\",\n        \"Possible Manipulation Indicators:\",\n        \"- \".join(manipulation_indicators),\n        \"\",\n        \"Final Recommendation:\",\n        final_recommendation\n    ])\n\n\n# Example usage\nimage_info = {\n    'filename': 'unnamed.png',\n    'dimensions': (1024, 1024),\n    'mode': 'RGB',\n    'format': 'PNG',\n    'file_size_kb': 1365.14,\n    'metadata': {\n        'integrity_flags': ['no_exif_data_found', 'missing_original_datetime', 'missing_camera_make'],\n        'camera_info': {\n            'make': 'Unknown',\n            'model': 'Unknown',\n            'software': 'Unknown',\n            'datetime_original': None,\n            'datetime_digitized': None,\n            'exposure_time': None,\n            'f_number': None,\n            'iso_speed': None,\n            'focal_length': None,\n            'flash': None,\n            'orientation': None\n        },\n        'gps_info': {'available': False}\n    },\n    'visual_analysis': {\n        'brightness': 106.29,\n        'contrast': 56.14,\n        'sharpness': 827.46,\n        'noise_estimate': 0.0038,\n        'histogram_entropy': 7.5886,\n        'detected_visual_anomalies': ['possible_aggressive_smoothing']\n    }\n}\n\nreport = generate_forensic_report(image_info)\nprint(report)\n```"
+  }
+}
