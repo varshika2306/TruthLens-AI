@@ -1,4 +1,13 @@
 # 🔍 TruthLens AI
+
+
+AI-Powered Digital Image Investigation Platform
+
+## 🌐 Live Demo
+
+🚀 Try the application here:
+
+https://truth-lens-ai-sage.vercel.app/
 ### AI-Powered Digital Image Investigation Platform using IBM Granite Models
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)
