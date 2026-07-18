@@ -66,7 +66,16 @@ Upload Service    Metadata Agent    Visual Agent
                         ▼
            AI Investigation Report
 ```
+## 🔗 Deployment
 
+Frontend:
+https://truth-lens-ai-sage.vercel.app/
+
+Backend API:
+https://truthlens-ai-13bj.onrender.com
+
+API Documentation:
+https://truthlens-ai-13bj.onrender.com/docs
 ---
 
 # 🛠 Tech Stack
