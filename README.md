@@ -8,6 +8,42 @@ AI-Powered Digital Image Investigation Platform
 🚀 Try the application here:
 
 https://truth-lens-ai-sage.vercel.app/
+
+
+## 📸 Application Screenshots
+
+### 🏠 Landing Page
+
+The TruthLens AI dashboard provides an intuitive interface for uploading images and initiating AI-powered forensic investigation.
+
+![TruthLens AI Home Page](screenshots/home-page.png)
+
+
+---
+
+### 📤 Image Upload & Investigation Process
+
+Users can upload digital images for authenticity analysis. The system processes the image through metadata extraction, visual inspection, and AI reasoning pipelines.
+
+![Image Upload and Analysis](screenshots/upload-analysis.png)
+
+
+---
+
+### 🔍 AI Investigation Report
+
+TruthLens AI generates an explainable forensic report containing authenticity assessment, confidence score, detected indicators, and analysis insights.
+
+![Investigation Report](screenshots/investigation-report.png)
+
+
+---
+
+### 🏗️ System Architecture
+
+The platform follows an AI-powered investigation pipeline combining frontend interaction, backend processing, computer vision analysis, and AI reasoning.
+
+![TruthLens AI Architecture](screenshots/architecture.png)
 ### AI-Powered Digital Image Investigation Platform using IBM Granite Models
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)
